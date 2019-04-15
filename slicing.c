@@ -117,6 +117,8 @@ int main() {
 	size_t* ranges = (size_t*)calloc(2 * mat->ndims, sizeof(size_t));
 
 	if(strchr(range1, ':') != NULL) {
+		ranges[0] = 0;
+		ranges[1] = mat->shape[0] - 1;
 		char part1[20], part2[20];
 		size_t i = 0, ind;
 		for(ind = 0; i < 20; i++) {
@@ -132,8 +134,10 @@ int main() {
 			part2[ind++] = range1[i];
 		}
 		part2[ind] = '\0';
-		ranges[0] = atoi(part1);
-		ranges[1] = atoi(part2);
+		if(part1[0] != '\0')
+			ranges[0] = atoi(part1);
+		if(part2[0] != '\0')
+			ranges[1] = atoi(part2);
 		dims_count++;
 	}
 	else {
@@ -141,6 +145,8 @@ int main() {
 	}
 
 	if(strchr(range2, ':') != NULL) {
+		ranges[2] = 0;
+		ranges[3] = mat->shape[1] - 1;
 		char part1[20], part2[20];
 		size_t i = 0, ind;
 		for(ind = 0; i < 20; i++) {
@@ -156,8 +162,10 @@ int main() {
 			part2[ind++] = range2[i];
 		}
 		part2[ind] = '\0';
-		ranges[2] = atoi(part1);
-		ranges[3] = atoi(part2);
+		if(part1[0] != '\0')
+			ranges[2] = atoi(part1);
+		if(part2[0] != '\0')
+			ranges[3] = atoi(part2);
 		dims_count++;
 	}
 	else {

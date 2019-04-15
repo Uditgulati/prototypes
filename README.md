@@ -118,3 +118,39 @@ No. of dimensions: 2
 ]
 
 ```
+
+*To extract a row:*
+
+```
+
+2 2
+1 2 3 4
+No. of dimensions: 2
+[
+  [1, 2], 
+  [3, 4]
+]
+1 :
+Slice is:
+No. of dimensions: 1
+[3, 4]
+
+```
+
+*To extract a column:*
+
+```
+
+2 2 
+1 2 3 4
+No. of dimensions: 2
+[
+  [1, 2], 
+  [3, 4]
+]
+: 0
+Slice is:
+No. of dimensions: 1
+[1, 3]
+
+```
