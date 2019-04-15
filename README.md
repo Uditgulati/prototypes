@@ -200,3 +200,65 @@ No. of dimensions: 2
 ]
 
 ```
+
++ **Broadcasting:**
+
+```
+
+Enter no. of dimensions: 2
+2 2
+1 2 3 4
+No. of dimensions: 2
+[
+  [1, 2], 
+  [3, 4]
+]
+Enter no. of dimensions: 1
+2
+10 10
+No. of dimensions: 1
+[10, 10]
+Matrix 1 after broadcasting: 
+No. of dimensions: 2
+[
+  [1, 2], 
+  [3, 4]
+]
+Matrix 2 after broadcasting: 
+No. of dimensions: 2
+[
+  [10, 10], 
+  [10, 10]
+]
+
+```
+
+```
+
+Enter no. of dimensions: 2 
+2 3
+1 2 3 4 5 6
+No. of dimensions: 2
+[
+  [1, 2, 3], 
+  [4, 5, 6]
+]
+Enter no. of dimensions: 1
+3
+10 20 30
+No. of dimensions: 1
+[10, 20, 30]
+Matrix 1 after broadcasting: 
+No. of dimensions: 2
+[
+  [1, 2, 3], 
+  [4, 5, 6]
+]
+Matrix 2 after broadcasting: 
+No. of dimensions: 2
+[
+  [10, 20, 30], 
+  [10, 20, 30]
+]
+
+```
